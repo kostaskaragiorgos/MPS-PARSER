@@ -1,0 +1,37 @@
+import sys
+from file import save_file_to_list
+from name import get_type, MinMax
+from columns import getColRestrictionValue1, getColRestrictionValue2, getA
+from rows import getRows, convertRowType, getRowType, getelementsofarow, findobj
+from rhs import getRHS, getb, getRHSRestrictionValue1, getRHSRestrictionValue2
+from columns import getColumns
+
+def savefile(outputfile, tosave):
+    columns = getColumns(tosave)
+    rows = getRows(tosave)
+    objname = findobj(rows)
+    A1 = getColRestrictionValue1(columns,objname)
+    A2 = getColRestrictionValue2(columns, objname)
+    rhs = getRHS(tosave)
+    rhs1 = getRHSRestrictionValue1(rhs)
+    rhs2 = getRHSRestrictionValue2(rhs)
+    rowtype = getRowType(rows)
+    problem_type = get_type(tosave)
+    with open(outputfile+'.txt','w') as f:
+        f.write(str(MinMax(problem_type))+'\n')
+        f.write(str(getelementsofarow(columns,str(objname).strip('\n')))+'\n')
+        f.write(str(A1))
+        f.write(str(A2)+'\n')
+        f.write(str(convertRowType(rowtype))+'\n')
+        f.write(str(getb(rhs1,rhs2))+'\n')
+
+def main():
+    script = sys.argv[0]
+    filename = sys.argv[1]
+    outputfile = sys.argv[2]
+
+    a = save_file_to_list(filename)
+    savefile(outputfile, a)
+
+if __name__ == '__main__':
+   main()
