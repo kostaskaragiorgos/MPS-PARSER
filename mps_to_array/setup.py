@@ -29,9 +29,15 @@ def main():
     script = sys.argv[0]
     filename = sys.argv[1]
     outputfile = sys.argv[2]
-
-    a = save_file_to_list(filename)
-    savefile(outputfile, a)
+    if filename.endswith(".mps") and outputfile.endswith(".txt"):
+        a = save_file_to_list(filename)
+        savefile(outputfile, a)
+    elif not filename.endswith(".mps"):
+        print("Input file needs to be .mps file")
+        sys.exit(1)
+    else:
+        print("Output file needs to be .txt file")
+        sys.exit(1)
 
 if __name__ == '__main__':
    main()
