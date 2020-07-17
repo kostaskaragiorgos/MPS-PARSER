@@ -17,7 +17,7 @@ def savefile(outputfile, tosave):
     rhs2 = getRHSRestrictionValue2(rhs)
     rowtype = getRowType(rows)
     problem_type = get_type(tosave)
-    with open(outputfile+'.txt','w') as f:
+    with open(outputfile,'w') as f:
         f.write(str(MinMax(problem_type))+'\n')
         f.write(str(getelementsofarow(columns,str(objname).strip('\n')))+'\n')
         f.write(str(A1))
@@ -26,9 +26,13 @@ def savefile(outputfile, tosave):
         f.write(str(getb(rhs1,rhs2))+'\n')
 
 def main():
-    script = sys.argv[0]
-    filename = sys.argv[1]
-    outputfile = sys.argv[2]
+    if len(sys.argv) < 3:
+        print("The arguments should be the script name , a .mps file as an input file and a .txt file as an output file")
+        sys.exit(1)
+    else:
+        script = sys.argv[0]
+        filename = sys.argv[1]
+        outputfile = sys.argv[2]
     if filename.endswith(".mps") and outputfile.endswith(".txt"):
         a = save_file_to_list(filename)
         savefile(outputfile, a)
