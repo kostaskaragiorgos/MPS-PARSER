@@ -5,6 +5,7 @@ from columns import getColRestrictionValue1, getColRestrictionValue2, getA
 from rows import getRows, convertRowType, getRowType, getelementsofarow, findobj
 from rhs import getRHS, getb, getRHSRestrictionValue1, getRHSRestrictionValue2
 from columns import getColumns
+from multiprocessing import Process
 
 def savefile(outputfile, tosave):
     columns = getColumns(tosave)
@@ -35,7 +36,9 @@ def main():
         outputfile = sys.argv[2]
     if filename.endswith(".mps") and outputfile.endswith(".txt"):
         a = save_file_to_list(filename)
-        savefile(outputfile, a)
+        p = Process(target=savefile, args=(outputfile,a))
+        p.start()
+        p.join()
     elif not filename.endswith(".mps"):
         print("Input file needs to be .mps file")
         sys.exit(1)
