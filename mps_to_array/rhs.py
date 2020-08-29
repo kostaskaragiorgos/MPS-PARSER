@@ -3,12 +3,12 @@ def getRHS(list):
     rhs= False
     RHS = []
     for i in list:
-        if (i[0:3] == "RHS"):
+        if (str(i[0:3]).upper() == "RHS"):
             rhs = True
             continue
         if rhs == True:
             RHS.append(i)
-        if (i[0:6] == "ENDATA"):
+        if (str(i[0:6]).upper() == "ENDATA"):
             break
     return RHS
 

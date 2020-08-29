@@ -5,9 +5,9 @@ def getRows(list):
     """
     rows = []
     for i in list:
-        if (i[0:7] != "COLUMNS") and  (i[0:4] != "ROWS" and i[0:4] != "NAME"):
+        if (str(i[0:7]).upper() != "COLUMNS") and  (str(i[0:4]).upper() != "ROWS" and str(i[0:4]).upper() != "NAME"):
             rows.append(i)
-        if i[0:7] == "COLUMNS":
+        if str(i[0:7]).upper() == "COLUMNS":
             break
     return rows
 
@@ -37,13 +37,13 @@ def convertRowType(rowlist):
     return : converted rowlist """
     rowtypeconverted = []
     for i in rowlist:
-        if i == "N":
+        if str(i).upper() == "N":
             rowtypeconverted.append("OBJ")
-        elif i == "E":
+        elif str(i).upper() == "E":
             rowtypeconverted.append(0)
-        elif i == "G":
+        elif str(i).upper() == "G":
             rowtypeconverted.append(1)
-        elif i == "L":
+        elif str(i).upper() == "L":
             rowtypeconverted.append(-1)
     return rowtypeconverted
 
@@ -60,5 +60,5 @@ def getelementsofarow(columns,row):
 
 def findobj(rows):
     for i in rows:
-        if i[1:2] == 'N':
+        if str(i[1:2]).upper() == 'N':
             return (i[4:12])

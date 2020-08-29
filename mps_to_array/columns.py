@@ -7,12 +7,12 @@ def getColumns(list):
     columns = []
     cls = False
     for i in list:
-        if (i[0:7] == "COLUMNS"):
+        if (str(i[0:7]).upper() == "COLUMNS"):
             cls = True
             continue
-        if (cls == True and i[0:3] != "RHS"):
+        if (cls == True and str(i[0:3]).upper() != "RHS"):
             columns.append(i)
-        if i[0:3] == "RHS":
+        if str(i[0:3]).upper() == "RHS":
             break
     return columns
 
