@@ -6,7 +6,7 @@ def getName(list):
     output:name
     """
     for i in list:
-        if i[0:4] == "NAME":
+        if str(i[0:4]).upper() == "NAME":
             if  "" in i[14:22]:
                 return "NO NAME"
             return i[14:22]
@@ -14,7 +14,7 @@ def getName(list):
 def get_type(list):
     """ returns the type of the problem """
     for i in list:
-        if i[0:4] == "NAME":
+        if str(i[0:4]).upper() == "NAME":
             if "" in i[72:78]:
                 return "MIN"
             return i[72:78]
