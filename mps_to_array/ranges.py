@@ -51,27 +51,3 @@ def getRangesRestrictionValue2(rangelist):
 def concatRange(list1, list2):
     return list1 + list2
 
-
-from file import get_len_of_list, save_file_to_list
-
-f = save_file_to_list("test.mps")
-p = getRanges(f)
-
-f = getRangeName(p)
-
-rest1 = getRangesRestrictionName1(p)
-
-val1 = getRangesRestrictionValue1(p)
-
-for i in p:
-    print(i)
-
-for i in f:
-    print(i)
-
-
-for i in rest1:
-    print(i)
-
-for i in val1:
-    print(i)
