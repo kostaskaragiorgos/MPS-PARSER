@@ -1,4 +1,3 @@
-        
 def getName(list):
     """
     returns the name of the mps file or sets it to NO NAME 
@@ -15,9 +14,9 @@ def get_type(list):
     """ returns the type of the problem """
     for i in list:
         if str(i[0:4]).upper() == "NAME":
-            if "" in i[72:78]:
+            if "" in i[74:77]:
                 return "MIN"
-            return i[72:78]
+            return i[74:77]
 
 def MinMax(type):
     """ returns a list 1x1 """
@@ -27,3 +26,5 @@ def MinMax(type):
     elif type == "MAX":
         MinMaxarr.append(1)
     return MinMaxarr
+
+f = save_file_to_list('Winco.mps')

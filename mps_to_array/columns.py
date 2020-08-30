@@ -31,7 +31,7 @@ def getColRestrictionName1(columnlist):
 
 def getColRestrictionValue1(columnlist, objname):
     colrestval1 = []
-    objname = objname.strip("\n")
+    objname = str(objname).strip("\n")
     for i in columnlist:
         if str(i[14:21]).strip(" ") == objname:
             continue
@@ -46,7 +46,7 @@ def getColRestrictionName2(columnlist):
 
 def getColRestrictionValue2(columnlist, objname):
     colrestvalue2 = []
-    objname = objname.strip("\n")
+    objname = str(objname).strip("\n")
     for i in columnlist:
         if str(i[39:46]).strip(" ") == objname:
             continue
