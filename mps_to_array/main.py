@@ -5,6 +5,7 @@ from columns import getColRestrictionValue1, getColRestrictionValue2, getA
 from rows import getRows, convertRowType, getRowType, getelementsofarow, findobj
 from rhs import getRHS, getb, getRHSRestrictionValue1, getRHSRestrictionValue2
 from columns import getColumns
+from ranges import getRanges, getRangesRestrictionValue1, getRangesRestrictionValue2, concatRange
 
 def savefile(outputfile, tosave):
     columns = getColumns(tosave)
@@ -15,6 +16,9 @@ def savefile(outputfile, tosave):
     rhs = getRHS(tosave)
     rhs1 = getRHSRestrictionValue1(rhs)
     rhs2 = getRHSRestrictionValue2(rhs)
+    ranges = getRanges(tosave)
+    ranges1 = getRangesRestrictionValue1(ranges)
+    ranges2 = getRangesRestrictionValue2(ranges)
     rowtype = getRowType(rows)
     problem_type = get_type(tosave)
     with open(outputfile,'w') as f:
@@ -24,6 +28,7 @@ def savefile(outputfile, tosave):
         f.write(str(A2))
         f.write(str(convertRowType(rowtype))+'\n')
         f.write(str(getb(rhs1,rhs2))+'\n')
+        f.write(str(concatRange(ranges1, ranges2))+"\n")
 
 def main():
     if len(sys.argv) < 3:
