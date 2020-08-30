@@ -26,5 +26,3 @@ def MinMax(type):
     elif type == "MAX":
         MinMaxarr.append(1)
     return MinMaxarr
-
-f = save_file_to_list('Winco.mps')
