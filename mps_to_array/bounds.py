@@ -15,7 +15,7 @@ def getBoundtype(boundlist):
     boundtype = []
     for i in boundlist:
         boundtype.append(i[1:3])
-    return boundtype\
+    return boundtype
 
 def getBoundName(boundlist):
     boundnames= []

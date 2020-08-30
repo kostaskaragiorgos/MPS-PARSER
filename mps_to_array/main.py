@@ -6,11 +6,15 @@ from rows import getRows, convertRowType, getRowType, getelementsofarow, findobj
 from rhs import getRHS, getb, getRHSRestrictionValue1, getRHSRestrictionValue2
 from columns import getColumns
 from ranges import getRanges, getRangesRestrictionValue1, getRangesRestrictionValue2, concatRange
+from bounds import getBounds, getBoundsRestrictionValue1 , getBoundsRestrictionValue2, concatBounds
 
 def savefile(outputfile, tosave):
     columns = getColumns(tosave)
     rows = getRows(tosave)
     objname = findobj(rows)
+    bound = getBounds(tosave)
+    b1 = getBoundsRestrictionValue1(bound)
+    b2 = getBoundsRestrictionValue2(bound)
     A1 = getColRestrictionValue1(columns,objname)
     A2 = getColRestrictionValue2(columns, objname)
     rhs = getRHS(tosave)
@@ -29,6 +33,7 @@ def savefile(outputfile, tosave):
         f.write(str(convertRowType(rowtype))+'\n')
         f.write(str(getb(rhs1,rhs2))+'\n')
         f.write(str(concatRange(ranges1, ranges2))+"\n")
+        f.write(str(concatBounds(b1, b2)))
 
 def main():
     if len(sys.argv) < 3:
