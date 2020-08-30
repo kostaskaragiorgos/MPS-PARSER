@@ -28,7 +28,7 @@ def getRowType(rowlist):
     """
     rowtype = []
     for i in rowlist:
-        rowtype.append(i[1:2])
+        rowtype.append(i[2:3])
     return rowtype
 
 def convertRowType(rowlist):
@@ -60,5 +60,5 @@ def getelementsofarow(columns,row):
 
 def findobj(rows):
     for i in rows:
-        if str(i[1:2]).upper() == 'N':
+        if str(i[2:3]).upper() == 'N':
             return (i[4:12])
