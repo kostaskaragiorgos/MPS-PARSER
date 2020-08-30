@@ -21,7 +21,7 @@ def savefile(outputfile, tosave):
         f.write(str(MinMax(problem_type))+'\n')
         f.write(str(getelementsofarow(columns,str(objname).strip('\n')))+'\n')
         f.write(str(A1))
-        f.write(str(A2)+'\n')
+        f.write(str(A2))
         f.write(str(convertRowType(rowtype))+'\n')
         f.write(str(getb(rhs1,rhs2))+'\n')
 

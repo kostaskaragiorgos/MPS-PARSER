@@ -6,10 +6,10 @@ def getRHS(list):
         if (str(i[0:3]).upper() == "RHS"):
             rhs = True
             continue
-        if rhs == True:
-            RHS.append(i)
         if (str(i[0:6]).upper() == "ENDATA"):
             break
+        if rhs == True:
+            RHS.append(i)
     return RHS
 
 def getRpartName(rhslist):
