@@ -24,3 +24,8 @@ def MinMax(type):
     else:
         MinMaxarr.append(-1)
     return MinMaxarr
+
+def MinMaxString(type):
+    if "MAX" in str(type).upper():
+        return "Max"
+    return "Min"
