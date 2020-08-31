@@ -9,12 +9,12 @@
   * [Table of contents](#Table_of_contents)
   * [Files/Folders](#Files/Folders)
   * [MpsToMathematical](#MpsToMathematical)
-     * [How-to-use](#How-to-use)
-     * [Dependencies](#Dependencies_MpsToMathematical)
+     * [How_to_use_MpsToMathematical](#How-to-use_MpsToMathematical)
+     * [Dependencies_MpsToMathematical](#Dependencies_MpsToMathematical)
      * [Documentation_MpsToMathematical](#Documentation_MpsToMathematical)
      * [Radon_MpsToMathematical](#Radon_MpsToMathematical)
-  *[mps_to_array](#mps_to_array)
-     * [How-to-use](#How-to-use)
+  * [mps_to_array](#mps_to_array)
+     * [How_to_use_mps_to_array](#How-to-use_mps_to_array)
      * [Dependencies](#Dependencies_mps_to_array)
      * [Radon_mps_to_array](#Radon_mps_to_array)
   * [License](#License)
@@ -28,7 +28,7 @@ Converts .mps files to mathematical form
 
 ![how-to-use]
 
- ## Dependencies_MpsToMathematical
+## Dependencies_MpsToMathematical
 
 
 
@@ -36,7 +36,7 @@ Converts .mps files to mathematical form
 
 Contains a subproject 
 
-## How-to-use
+## How-to-use_mps_to_array
 
 ![How-to-use](https://github.com/kostaskaragiorgos/MPS-PARSER/blob/master/how-to-use.gif)
 
