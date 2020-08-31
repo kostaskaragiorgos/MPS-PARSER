@@ -4,7 +4,7 @@ from mps_to_array.name import get_type, MinMax, MinMaxString
 from mps_to_array.columns import getColRestrictionValue1, getColRestrictionValue2, getA
 from mps_to_array.rows import getRows, convertRowType, getRowType, getelementsofarow, findobj
 from mps_to_array.rhs import getRHS, getb, getRHSRestrictionValue1, getRHSRestrictionValue2
-from mps_to_array.columns import getColumns
+from mps_to_array.columns import getColumns, getColVarNameFromRest
 from mps_to_array.ranges import getRanges, getRangesRestrictionValue1, getRangesRestrictionValue2, concatRange
 from mps_to_array.bounds import getBounds, getBoundsRestrictionValue1 , getBoundsRestrictionValue2, concatBounds
 
@@ -13,10 +13,12 @@ def savefile(outputfile, tosave):
     columns = getColumns(tosave)
     rows = getRows(tosave)
     objname = findobj(rows)
-
+    objvarnames = getColVarNameFromRest(columns, objname)
+    rowelemenents = getelementsofarow(columns,str(objname).strip('\n'))
+    objectivefunction = [i+ j for i , j in zip(rowelemenents, objvarnames)]
     with open(outputfile,'w') as f:
         f.write(str(MinMaxString(problem_type)))
-        f.write(str(getelementsofarow(columns,str(objname).strip('\n')))+'\n')
+        f.write(str(objectivefunction)+'\n')
         f.write("S.T \n")
         
 def main():
