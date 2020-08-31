@@ -41,9 +41,30 @@ Contains a subproject
 ![How-to-use](https://github.com/kostaskaragiorgos/MPS-PARSER/blob/master/how-to-use.gif)
 
 
- ## Dependencies_mps_to_array
+## Dependencies_mps_to_array
 
-  
+## Radon_mps_to_array
+
+
+## Radon cc
+
+### bounds
+
+### columns
+
+### file
+
+### main
+
+### name
+
+### ranges
+
+### rhs
+
+### rows
+
+
 ## License
 
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
