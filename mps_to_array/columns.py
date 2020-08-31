@@ -53,5 +53,21 @@ def getColRestrictionValue2(columnlist, objname):
         colrestvalue2.append(i[49:61])
     return colrestvalue2
 
+def getColVarNameFromRest(columnlist,restrictionname):
+    """
+    Saves the variable name based on restriction name
+    Args:
+        columnlist: a list with columns
+        restrictionname: the name of the restriction
+    Returns:
+        A list of variable names.if none returns an empty list.
+    """
+    restrictionname = str(restrictionname).strip("\n")
+    colvarnamesfromobj= []
+    for i in columnlist:
+        if str(i[39:46]).strip(" ") == str(restrictionname).strip(" ") or str(i[14:21]).strip(" ") == (restrictionname).strip(" "):
+            colvarnamesfromobj.append(i[4:12])
+    return colvarnamesfromobj
+
 def getA(list1, list2):
     return list1 + list2
