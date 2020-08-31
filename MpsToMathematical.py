@@ -9,13 +9,16 @@ from mps_to_array.ranges import getRanges, getRangesRestrictionValue1, getRanges
 from mps_to_array.bounds import getBounds, getBoundsRestrictionValue1 , getBoundsRestrictionValue2, concatBounds
 
 def savefile(outputfile, tosave):
+    problem_type = get_type(tosave)
     columns = getColumns(tosave)
     rows = getRows(tosave)
     objname = findobj(rows)
 
     with open(outputfile,'w') as f:
-        f.write(str(MinMaxString(problem_type))+'\n')
+        f.write(str(MinMaxString(problem_type)))
         f.write(str(getelementsofarow(columns,str(objname).strip('\n')))+'\n')
+        f.write("S.T \n")
+        
 def main():
     if len(sys.argv) < 3:
         print("The arguments should be the script name , a .mps file as an input file and a .txt file as an output file")
