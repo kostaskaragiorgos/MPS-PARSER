@@ -1,4 +1,10 @@
 def getRanges(list):
+    """ Adds the ranges  to a list
+    Args:
+        A list.
+    Returns:
+        A list with the ranges. if no ranges found returns an empty list.
+    """
     ranges= False
     Ranges = []
     for i in list:
@@ -12,6 +18,12 @@ def getRanges(list):
     return Ranges
 
 def getRangeName(rangelist):
+    """ Adds the name of every range to a list
+    Args:
+        A list with ranges
+    Returns:
+        A list with the names of ranges. if no ranges found returns an empty list.
+    """
     rangeName = []
     for i in rangelist:
         rangeName.append(i[4:12])
@@ -19,6 +31,12 @@ def getRangeName(rangelist):
 
 
 def getRangesRestrictionName1(rangelist):
+    """ Adds the name of restriction 1 to a list
+    Args:
+        A list with ranges
+    Returns:
+        A list with the names of restriction 1. if no restrictions 1 found returns an empty list.
+    """
     rangerestname1 = []
     for i in rangelist:
         rangerestname1.append(i[14:22])
@@ -26,6 +44,12 @@ def getRangesRestrictionName1(rangelist):
 
 
 def getRangesRestrictionValue1(rangelist):
+        """ Adds the values of restriction 1 to a list
+    Args:
+        A list with ranges
+    Returns:
+        A list with the values of restriction 1. if no restrictions 1 found returns an empty list.
+    """
     rangerestval1 = []
     for i in rangelist:
         rangerestval1.append(i[24:36])
@@ -34,12 +58,24 @@ def getRangesRestrictionValue1(rangelist):
     return rangerestval1
 
 def getRangesRestrictionName2(rangelist):
+        """ Adds the name of restriction 2 to a list
+    Args:
+        A list with ranges
+    Returns:
+        A list with the names of restriction 2. if no restrictions 2 found returns an empty list.
+    """
     rangerestname2 = []
     for i in rangelist:
         rangerestname2.append(i[39:47])
     return rangerestname2
 
 def getRangesRestrictionValue2(rangelist):
+    """ Adds the values of restriction 2 to a list
+    Args:
+        A list with ranges
+    Returns:
+        A list with the values of restriction 2. if no restrictions 2 found returns an empty list.
+    """
     rangerestval2 = []
     for i in rangelist:
         rangerestval2.append(i[49:61])
