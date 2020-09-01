@@ -43,7 +43,7 @@ def convertRowType(rowlist):
             rowtypeconverted.append(0)
         elif str(i).upper() == "G":
             rowtypeconverted.append(1)
-        elif str(i).upper() == "L":
+        else:
             rowtypeconverted.append(-1)
     return rowtypeconverted
 
