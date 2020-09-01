@@ -1,4 +1,10 @@
 def getBounds(list):
+    """ Adds bounds  to a list
+    Args:
+        A list.
+    Returns:
+        A list with bounds. if no bounds found returns an empty list.
+    """
     bounds= False
     Bounds = []
     for i in list:
@@ -12,12 +18,24 @@ def getBounds(list):
     return Bounds
 
 def getBoundtype(boundlist):
+    """ Adds the bound type of every bound to a list
+    Args:
+        A list with bounds
+    Returns:
+        A list with the type of bounds. if no bounds found returns an empty list.
+    """
     boundtype = []
     for i in boundlist:
         boundtype.append(i[1:3])
     return boundtype
 
 def getBoundName(boundlist):
+    """ Adds the name of every bound to a list
+    Args:
+        A list with bounds
+    Returns:
+        A list with the names of bounds. if no bounds found returns an empty list.
+    """
     boundnames= []
     for i in boundlist:
         boundnames.append(i[4:12])
@@ -25,6 +43,12 @@ def getBoundName(boundlist):
 
 
 def getBoundsRestrictionName1(boundlist):
+    """ Adds the name of restriction 1 to a list
+    Args:
+        A list with bounds
+    Returns:
+        A list with the names of restriction 1. if no restrictions 1 found returns an empty list.
+    """
     boundsrestname1 = []
     for i in boundlist:
         boundsrestname1.append(i[14:22])
@@ -32,6 +56,12 @@ def getBoundsRestrictionName1(boundlist):
 
 
 def getBoundsRestrictionValue1(boundlist):
+    """ Adds the values of restriction 1 to a list
+    Args:
+        A list with bounds
+    Returns:
+        A list with the values of restriction 1. if no restrictions 1 found returns an empty list.
+    """
     boundrestval1 = []
     for i in boundlist:
         boundrestval1.append(i[24:36])
@@ -40,12 +70,24 @@ def getBoundsRestrictionValue1(boundlist):
     return boundrestval1
 
 def getBoundsRestrictionName2(boundlist):
+    """ Adds the name of restriction 2 to a list
+    Args:
+        A list with bounds
+    Returns:
+        A list with the names of restriction 2. if no restrictions 2 found returns an empty list.
+    """
     boundsrestname2 = []
     for i in boundlist:
         boundsrestname2.append(i[39:47])
     return boundsrestname2
 
 def getBoundsRestrictionValue2(boundlist):
+    """ Adds the values of restriction 2 to a list
+    Args:
+        A list with bounds
+    Returns:
+        A list with the values of restriction 2. if no restrictions 2 found returns an empty list.
+    """
     boundsrestval2 = []
     for i in boundlist:
         boundsrestval2.append(i[49:61])
