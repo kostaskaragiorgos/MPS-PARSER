@@ -1,19 +1,21 @@
-def getBounds(list):
+""" needed functions to work with bounds """
+
+def getBounds(lista):
     """ Adds the bounds  to a list
     Args:
         A list.
     Returns:
         A list with the bounds. if no bounds found returns an empty list.
     """
-    bounds= False
+    bounds = False
     Bounds = []
-    for i in list:
-        if (str(i[0:6]).upper() == "BOUNDS"):
+    for i in lista:
+        if str(i[0:6]).upper() == "BOUNDS":
             bounds = True
             continue
-        if (str(i[0:6]).upper() == "ENDATA"):
+        if str(i[0:6]).upper() == "ENDATA":
             break
-        if bounds == True:
+        if bounds:
             Bounds.append(i)
     return Bounds
 
@@ -36,7 +38,7 @@ def getBoundName(boundlist):
     Returns:
         A list with the names of bounds. if no bounds found returns an empty list.
     """
-    boundnames= []
+    boundnames = []
     for i in boundlist:
         boundnames.append(i[4:12])
     return boundnames
@@ -65,7 +67,7 @@ def getBoundsRestrictionValue1(boundlist):
     boundrestval1 = []
     for i in boundlist:
         boundrestval1.append(i[24:36])
-    while("" in boundrestval1) : 
+    while "" in boundrestval1:
         boundrestval1.remove("")
     return boundrestval1
 
@@ -91,10 +93,14 @@ def getBoundsRestrictionValue2(boundlist):
     boundsrestval2 = []
     for i in boundlist:
         boundsrestval2.append(i[49:61])
-    while("" in boundsrestval2) : 
+    while "" in boundsrestval2: 
         boundsrestval2.remove("")
     return boundsrestval2
 
 
 def concatBounds(list1, list2):
+    """ concatenation of 2 lists 
+    Args:
+        The lists to concatenate
+    """
     return list1 + list2
