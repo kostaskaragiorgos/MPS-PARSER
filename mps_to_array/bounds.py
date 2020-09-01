@@ -1,9 +1,9 @@
 def getBounds(list):
-    """ Adds bounds  to a list
+    """ Adds the bounds  to a list
     Args:
         A list.
     Returns:
-        A list with bounds. if no bounds found returns an empty list.
+        A list with the bounds. if no bounds found returns an empty list.
     """
     bounds= False
     Bounds = []
