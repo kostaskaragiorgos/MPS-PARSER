@@ -1,5 +1,6 @@
+""" saves content of the file to a list """
 def save_file_to_list(filename):
-    """ 
+    """
     saves a file to a list
     input: filename
     return: list
@@ -12,10 +13,10 @@ def save_file_to_list(filename):
 
 
 
-def get_len_of_list(list):
-    """ 
-    returns the length of the list 
+def get_len_of_list(lista):
+    """
+    returns the length of the list
     input:list
     output: number
     """
-    return len(list)
+    return len(lista)
