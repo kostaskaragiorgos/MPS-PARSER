@@ -10,10 +10,10 @@ def getColumns(list):
         if (str(i[0:7]).upper() == "COLUMNS"):
             cls = True
             continue
-        if (cls == True and str(i[0:3]).upper() != "RHS"):
-            columns.append(i)
         if str(i[0:3]).upper() == "RHS":
             break
+        if (cls == True):
+            columns.append(i)
     return columns
 
 def getColVarName(columnlist):
