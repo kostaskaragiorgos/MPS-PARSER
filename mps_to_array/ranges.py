@@ -11,7 +11,7 @@ def getRanges(list):
         if (str(i[0:6]).upper() == "RANGES"):
             ranges = True
             continue
-        if (str(i[0:6]).upper() == "ENDATA" or str(i[0:6]).upper() ==  "BOUNDS"):
+        if (str(i[0:6]).upper() == any(["ENDATA", "BOUNDS"])):
             break
         if ranges == True:
             Ranges.append(i)
