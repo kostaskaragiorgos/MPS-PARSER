@@ -49,7 +49,7 @@ def getRangesRestrictionValue1(rangelist):
         A list with ranges
     Returns:
         A list with the values of restriction 1. if no restrictions 1 found returns an empty list.
-        """
+    """
     rangerestval1 = []
     for i in rangelist:
         rangerestval1.append(i[24:36])
