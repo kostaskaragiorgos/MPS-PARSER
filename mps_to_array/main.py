@@ -1,12 +1,12 @@
 import sys
-from mps_to_array.file import save_file_to_list
-from mps_to_array.name import get_type, MinMax
-from mps_to_array.columns import getColRestrictionValue1, getColRestrictionValue2, getA
-from mps_to_array.rows import getRows, convertRowType, getRowType, getelementsofarow, findobj
-from mps_to_array.rhs import getRHS, getb, getRHSRestrictionValue1, getRHSRestrictionValue2
-from mps_to_array.columns import getColumns
-from mps_to_array.ranges import getRanges, getRangesRestrictionValue1, getRangesRestrictionValue2, concatRange
-from mps_to_array.bounds import getBounds, getBoundsRestrictionValue1 , getBoundsRestrictionValue2, concatBounds
+from file import save_file_to_list
+from name import get_type, MinMax
+from columns import getColRestrictionValue1, getColRestrictionValue2, getA
+from rows import getRows, convertRowType, getRowType, getelementsofarow, findobj
+from rhs import getRHS, getb, getRHSRestrictionValue1, getRHSRestrictionValue2
+from columns import getColumns
+from ranges import getRanges, getRangesRestrictionValue1, getRangesRestrictionValue2, concatRange
+from bounds import getBounds, getBoundsRestrictionValue1 , getBoundsRestrictionValue2, concatBounds
 
 def savefile(outputfile, tosave):
     columns = getColumns(tosave)

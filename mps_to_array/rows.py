@@ -6,7 +6,7 @@ def getRows(list):
     rows = []
     frows = False
     for i in list:
-        if (str(i[0:7]).upper() == "ROWS"):
+        if (str(i[0:4]).upper().strip(" ") == "ROWS"):
             frows = True
             continue
         if str(i[0:7]).upper() == "COLUMNS":
