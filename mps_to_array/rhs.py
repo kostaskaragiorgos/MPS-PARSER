@@ -12,7 +12,7 @@ def getRHS(list):
         if (str(i[0:3]).upper() == "RHS"):
             rhs = True
             continue
-        if (str(i[0:6]).upper() == "ENDATA" or str(i[0:6]).upper() == "RANGES" or str(i[0:6]).upper() == "BOUNDS" ):
+        if (str(i[0:3]).upper() == any(["ENDATA","RANGES","BOUNDS"])):
             break
         if rhs:
             RHS.append(i)
