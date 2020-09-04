@@ -4,11 +4,15 @@ def getRows(list):
     return list
     """
     rows = []
+    frows = False
     for i in list:
-        if (str(i[0:7]).upper() != "COLUMNS") and  (str(i[0:4]).upper() != "ROWS" and str(i[0:4]).upper() != "NAME"):
-            rows.append(i)
+        if (str(i[0:7]).upper() == "ROWS"):
+            frows = True
+            continue
         if str(i[0:7]).upper() == "COLUMNS":
             break
+        if frows:
+            rows.append(i)
     return rows
 
 def getRowNames(rowlist):
