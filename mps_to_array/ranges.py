@@ -44,7 +44,7 @@ def getRangesRestrictionName1(rangelist):
 
 
 def getRangesRestrictionValue1(rangelist):
-        """ Adds the values of restriction 1 to a list
+    """ Adds the values of restriction 1 to a list
     Args:
         A list with ranges
     Returns:
@@ -58,7 +58,7 @@ def getRangesRestrictionValue1(rangelist):
     return rangerestval1
 
 def getRangesRestrictionName2(rangelist):
-        """ Adds the name of restriction 2 to a list
+    """ Adds the name of restriction 2 to a list
     Args:
         A list with ranges
     Returns:
