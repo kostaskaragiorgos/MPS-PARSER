@@ -1,6 +1,6 @@
 
 def getRHS(list):
-     """ Adds the "rhses"  to a list
+    """ Adds the "rhses"  to a list
     Args:
         A list.
     Returns:
@@ -19,7 +19,7 @@ def getRHS(list):
     return RHS
 
 def getRpartName(rhslist):
-        """ Adds the name of every "rhs" to a list
+    """ Adds the name of every "rhs" to a list
     Args:
         A list with rhses
     Returns:
@@ -31,7 +31,7 @@ def getRpartName(rhslist):
     return rpartname
 
 def getRHSRestrictionName1(rhslist):
-        """ Adds the name of restriction 1 to a list
+    """ Adds the name of restriction 1 to a list
     Args:
         A list with rhses
     Returns:
@@ -43,7 +43,7 @@ def getRHSRestrictionName1(rhslist):
     return rhsrestname1
 
 def getRHSRestrictionValue1(rhslist):
-        """ Adds the values of restriction 1 to a list
+    """ Adds the values of restriction 1 to a list
     Args:
         A list with rhses
     Returns:
@@ -71,7 +71,7 @@ def getRHSRestrictionName2(rhslist):
 
 
 def getRHSRestrictionValue2(rhslist):
-        """ Adds the values of restriction 2 to a list
+    """ Adds the values of restriction 2 to a list
     Args:
         A list with rhses
     Returns:
