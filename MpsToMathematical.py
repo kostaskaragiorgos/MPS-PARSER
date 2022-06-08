@@ -33,6 +33,7 @@ def savefile(outputfile, tosave):
 def main():
     if len(sys.argv) < 3:
         print("The arguments should be the script name , a .mps file as an input file and a .txt file as an output file")
+        logging.error("The arguments should be the script name , a .mps file as an input file and a .txt file as an output file")
         sys.exit(1)
     else:
         script = sys.argv[0]
