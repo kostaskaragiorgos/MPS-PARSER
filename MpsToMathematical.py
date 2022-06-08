@@ -1,4 +1,5 @@
 import sys
+import logging
 from mps_to_array.file import save_file_to_list
 from mps_to_array.name import get_type, MinMax, MinMaxString
 from mps_to_array.columns import getColRestrictionValue1, getColRestrictionValue2, getA
@@ -7,6 +8,9 @@ from mps_to_array.rhs import getRHS, getb, getRHSRestrictionValue1, getRHSRestri
 from mps_to_array.columns import getColumns, getColVarNameFromRest
 from mps_to_array.ranges import getRanges, getRangesRestrictionValue1, getRangesRestrictionValue2, concatRange
 from mps_to_array.bounds import getBounds, getBoundsRestrictionValue1 , getBoundsRestrictionValue2, concatBounds
+
+logging.basicConfig(filename='info.log',format='%(levelname)s %(asctime)s %(message)s', level=logging.DEBUG)
+
 
 def savefile(outputfile, tosave):
     problem_type = get_type(tosave)
