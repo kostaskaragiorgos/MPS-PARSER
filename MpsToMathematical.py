@@ -44,7 +44,7 @@ def main():
         logging.info("Success")
     elif not filename.endswith(".mps"):
         print("Input file needs to be .mps file")
-        
+        logging.error("Input file needs to be .mps file")
         sys.exit(1)
     else:
         print("Output file needs to be .txt file")
