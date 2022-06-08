@@ -48,6 +48,7 @@ def main():
         sys.exit(1)
     else:
         print("Output file needs to be .txt file")
+        logging.error("Output file needs to be .txt file")
         sys.exit(1)
 
 if __name__ == '__main__':
