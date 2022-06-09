@@ -42,7 +42,7 @@ def main():
     if filename.endswith(".mps") and outputfile.endswith(".txt"):
         a = save_file_to_list(filename)
         savefile(outputfile, a)
-        logging.info("Success")
+        logging.info("Success a txt file with name: " + str(outputfile) + " has been created")
     elif not filename.endswith(".mps"):
         print("Input file needs to be .mps file")
         logging.error("Input file needs to be .mps file")
