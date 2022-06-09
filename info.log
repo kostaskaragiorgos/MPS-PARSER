@@ -1,1 +1,4 @@
 ERROR 2022-06-08 21:54:47,171 The arguments should be the script name , a .mps file as an input file and a .txt file as an output file
+ERROR 2022-06-09 12:54:26,824 The arguments should be the script name , a .mps file as an input file and a .txt file as an output file
+ERROR 2022-06-09 12:54:51,500 The arguments should be the script name , a .mps file as an input file and a .txt file as an output file
+INFO 2022-06-09 12:54:56,478 Success a txt file with name:text.txthas been created
